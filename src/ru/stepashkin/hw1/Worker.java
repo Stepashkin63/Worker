@@ -12,10 +12,10 @@ public class Worker {
     public void start() {
         for (int i = 0; i < 100; i++) {
             if (i == 33) {
-                errorCallback.onError("Ошибка!");
-                continue;
+                errorCallback.onError("Задача " + i + " Ошибка!");
+            } else {
+                callback.onDone("Задача " + i + " выполнена");
             }
-            callback.onDone("Задача " + i + " выполнена");
         }
     }
 }
